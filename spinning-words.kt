@@ -14,10 +14,13 @@ import spinwords.spinWords
 fun spinWords(sentence: String): String {
 
     fun invertWord(word: String): String {
-        // for (l in s.length - 1 downTo 0 ) {
-        //      println(l) 
-        // }
-            
+        var invertedWord = "";
+
+        for (i in word.length - 1 downTo 0 ) {
+             invertedWord += word[i]
+        }
+
+        return invertedWord
     }
 
     var result = "";
@@ -32,7 +35,7 @@ fun spinWords(sentence: String): String {
         }
     }
 
-    return result
+    return result.dropLast(1)
 }
 
 fun main(args: Array<String>) {
